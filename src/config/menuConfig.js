@@ -74,8 +74,18 @@ const menuList = [
         key: '/rich'
     },
     {
-        title: '城市管理',
-        key: '/city'
+        title: '个人简历',
+        key: '/resume',
+        children: [
+            {
+                title: '信息预览',
+                key: '/resume/view',
+            },
+            {
+                title: '信息编辑',
+                key: '/resume/edit',
+            }
+        ]
     },
     {
         title: '订单管理',

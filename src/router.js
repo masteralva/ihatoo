@@ -14,7 +14,11 @@ import Messages from './pages/ui/messages'
 import Tabs from './pages/ui/tabs'
 import Gallery from './pages/ui/gallery'
 import NoMatch from "./pages/nomatch/page404";
-
+import FormLogin from './pages/form/login'
+import FormRegister from './pages/form/register'
+import BasicTable from './pages/table/basicTable'
+import HighTable from './pages/table/highTable'
+import Resume from './pages/resume'
 export default class IRouter extends React.Component{
 
     render () {
@@ -37,6 +41,11 @@ export default class IRouter extends React.Component{
                                     <Route  path="/ui/messages" component={Messages} />
                                     <Route  path="/ui/tabs" component={Tabs} />
                                     <Route  path="/ui/gallery" component={Gallery} />
+                                    <Route path="/form/login" component={FormLogin} />
+                                    <Route path="/form/reg" component={FormRegister} />
+                                    <Route path="/table/basic" component={BasicTable} />
+                                    <Route path="/table/high" component={HighTable} />
+                                    <Route path="/resume/view" component={Resume} />
                                     <Route component={NoMatch}></Route>
                                 </Switch>
                             </Admin>

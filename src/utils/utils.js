@@ -15,5 +15,19 @@ export default {
             S = '0'+S
         }
         return date.getFullYear()+'-'+(date.getMonth()+1)+'-'+date.getDate()+'  '+H+':'+M+':'+S
-    }
+    },
+    pagination(data,callback){
+        return {
+            onChange:(current)=>{
+                callback(current)
+            },
+            current:data.result.page,
+            pageSize:data.result.page_size,
+            total: data.result.total_count,
+            showTotal:()=>{
+                return `共${data.result.total_count}条`
+            },
+            showQuickJumper:true
+        }
+    },
 }
